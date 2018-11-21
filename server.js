@@ -3,18 +3,12 @@ const express = require('express'),
   bodyParser = require('body-parser');
   port = process.env.PORT || 5000;
 
-
 const mysql = require('mysql');
 // connection configurations
-const mc = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'netset@123',
-    database: 'mydb'
-});
- 
+const mc = require('./db')
+
 // connect to database
-mc.connect();
+//mc.connect();
 
 app.listen(port);
 
